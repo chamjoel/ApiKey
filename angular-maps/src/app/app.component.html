@@ -1,0 +1,36 @@
+{{title}}
+<agm-map [latitude]="latCasa" [longitude]="lngCasa">
+  <agm-marker [latitude]="latCasa" [longitude]="lngCasa" [iconUrl]="icon">
+  </agm-marker>
+   <agm-marker [latitude]=45.523289 [longitude]=9.232203 [iconUrl]="ebay">
+  </agm-marker>
+   <agm-marker [latitude]=45.534786 [longitude]=9.233451 [iconUrl]="apple">
+  </agm-marker>
+  <agm-marker [latitude]=45.531821 [longitude]=9.25133 [iconUrl]="amazon">
+  </agm-marker>
+  <agm-circle [latitude]="latCasa" [longitude]="lngCasa"
+      [radius]="5000"
+      [fillColor]="'red'">
+  </agm-circle>
+  <agm-circle [latitude]="lat1" [longitude]="lgn1"
+      [radius]="5000"
+      [fillColor]="colorC">
+  </agm-circle>
+<agm-polygon [paths]="triangle" [fillColor]="'red'">
+
+</agm-polygon>
+<agm-polygon [paths]="rectangle" [fillColor]="'red'">
+
+</agm-polygon>
+<agm-polygon [paths]="rectangle" [fillColor]="colorR">
+</agm-polygon>
+</agm-map>
+
+<button (click)="changeColor('red')"> rosso</button>
+<button (click)="changeColor('green')">verde</button>
+<button (click)="changeColor('yellow')">giallo</button>
+<P>Scegli un buttone per il rettangolo:</P>
+<button (click)="changeRect('red')"> rosso</button>
+<button (click)="changeRect('green')">verde</button>
+<button (click)="changeRect('yellow')">giallo</button>
+
